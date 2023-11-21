@@ -5,9 +5,10 @@
     </p>
   <% end %>
 
-  <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl">Products</h1>
+  <div class="flex justify-between items-center pb-8">
+    <h1 class="mx-auto text-lg font-bold text-4xl">Products</h1>
   </div>
+
   <table id="products" class="mx-auto">
     <tfoot>
       <tr>
@@ -15,7 +16,7 @@
           <div class="mt-8">
             <%= link_to "New product",
                 new_product_path,
-                class: "rounded-lg py-3 px-5 bg-blue-600
+                class: "inline rounded-lg py-3 px-5 bg-green-600
                 text-white block font-medium" %>
           </div>
         </td>
@@ -23,7 +24,7 @@
     </tfoot>
     <tbody>
       <% @products.each do |product| %>
-        <tr class="<%= cycle('bg-green-50', 'bg-white') %>">
+        <tr class="<%= cycle("bg-green-50", "bg-white") %>">
           <td class="px-2 py-3">
             <%= image_tag(product.image_url, class: 'w-40') %>
           </td>
