@@ -13,7 +13,7 @@
 ActiveRecord::Schema[7.1].define(version: 2023_11_20_132437) do
   create_table "products", force: :cascade do |t|
     t.string "title"
-    t.text "descirption"
+    t.text "description"
     t.string "image_url"
     t.decimal "price", precision: 8, scale: 2
     t.datetime "created_at", null: false

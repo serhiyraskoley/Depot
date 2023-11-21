@@ -11,7 +11,7 @@ Product.delete_all
 #...
 
 Product.create!(title: "Docker for Rails Developers",
-  descirption:
+  description:
   %{<p>
   <em>Build, Ship, and Run Your Applications Everywhere</em>
   Docker does for DevOps what Rails did for web development—it gives 
@@ -27,7 +27,7 @@ Product.create!(title: "Docker for Rails Developers",
   price: 24.95)
 
 Product.create!(title: "Modern CSS with Tailwind",
-  descirption:
+  description:
   %{<p>
   <em>Flexible Styling Without the Fuss</em>
   Tailwind CSS is an exciting new CSS framework you to design your site 
@@ -43,7 +43,7 @@ Product.create!(title: "Modern CSS with Tailwind",
   price: 24.95)
 
 Product.create!(title: "Design and Build Great Web APIs",
-  descirption:
+  description:
   %{<p>
   <em>Robust, Reliable, and Resilient</em>
   APIs are transforming the business world at an increasing pace. 
