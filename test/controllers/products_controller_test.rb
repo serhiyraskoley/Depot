@@ -9,6 +9,9 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
     get products_url
     assert_response :success
+    assert_select "nav a", minimum: 3 # assert that there are at least 3 <a> tags in the <nav> element
+    assert_select "td img"
+    assert_select "h1", "Products"
   end
 
   test "should get new" do
@@ -46,4 +49,5 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to products_url
   end
+
 end
