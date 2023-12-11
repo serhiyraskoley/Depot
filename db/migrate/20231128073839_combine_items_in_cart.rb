@@ -16,7 +16,6 @@ class CombineItemsInCart < ActiveRecord::Migration[7.1]
           item.save!
         end
       end
-      
     end
   end
 
@@ -26,7 +25,7 @@ class CombineItemsInCart < ActiveRecord::Migration[7.1]
       # add individual items
       line_item.quantity.times do
         LineItem.create(
-          card_id: line_item.card_id,
+          cart_id: line_item.card_id,
           product_id: line_item.product_id,
           quantity: 1
         )
