@@ -11,8 +11,8 @@ class Order < ApplicationRecord
 
   def add_line_items_from_cart(cart)
     cart.line_items.each do |item|
-      # item.card_id = nil # remove the association between the line item and the cart
-      line_items << item # line_items is an association method
+      # item.cart_id = nil Got error. SQLite3::ConstraintException: NOT NULL constraint failed: line_items.cart_id
+      line_items << item
     end
   end
 end
