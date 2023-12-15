@@ -2,13 +2,13 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="payment"
 export default class extends Controller {
-  static targets = ["selection", "additionalFIelds"]
+  static targets = ["selection", "additionalFields"]
 
   initialize() {
     this.showAdditionalFields()
   }
 
-  show AdditionalFields() {
+  showAdditionalFields() {
     let selection = this.selectionTarget.value
 
     for (let fields of this.additionalFieldsTargets) {
