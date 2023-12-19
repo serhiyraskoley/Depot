@@ -1,7 +1,7 @@
 class Order < ApplicationRecord
   enum pay_type: {
-    "Check" => 0,
-    "Credit card" => 1,
+    "Check"          => 0,
+    "Credit card"    => 1,
     "Purchase order" => 2
   }
 
@@ -11,8 +11,8 @@ class Order < ApplicationRecord
 
   def add_line_items_from_cart(cart)
     cart.line_items.each do |item|
-      # item.card_id = nil # remove the association between the line item and the cart
-      line_items << item # line_items is an association method
+      item.cart_id = nil
+      line_items << item
     end
   end
 end
