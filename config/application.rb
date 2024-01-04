@@ -23,6 +23,6 @@ module Depot
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-    config.web_console.whitelisted_ips = "192.168.154.1"
+    # config.web_console.whitelisted_ips = "192.168.154.0/24"
   end
 end
