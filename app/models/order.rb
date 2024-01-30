@@ -39,7 +39,7 @@ class Order < ApplicationRecord
         payment_details[:po_num] = pay_type_params[:po_number]
     end
 
-    patment_result = Pago.make_payment(
+    payment_result = Pago.make_payment(
       order_id: id,
       payment_method: payment_method,
       payment_details: payment_details
