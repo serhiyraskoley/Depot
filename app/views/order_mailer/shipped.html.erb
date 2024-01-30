@@ -1,0 +1,20 @@
+<h3>Pragmatic Order Shipped</h3>
+
+<p>
+  This is just to let you know we are shipping your recent order.
+</p>
+
+<table>
+  <tr>
+    <th clospan="2">Qty</th>
+    <th>Description</th>
+  </tr>
+  <%= render @order.line_items -%>
+</table>
+
+
+<h1>Order#shipped</h1>
+
+<p>
+  <%= @greeting %>, find me in app/views/order_mailer/shipped.html.erb
+</p>
